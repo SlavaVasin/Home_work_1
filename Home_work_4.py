@@ -1,4 +1,6 @@
 '''Home Work 4'''
+from random import randint
+
 '''Задача 22: Даны два неупорядоченных набора целых чисел (может быть, с
 повторениями). Выдать без повторений в порядке возрастания все те числа, которые
 встречаются в обоих наборах.
@@ -45,3 +47,22 @@
 заданной во входном файле грядки.
 4 -> 1 2 3 4
 9'''
+
+n = int(input('Введите кол-во кустов: '))
+lst = []
+
+
+def creating_bushes(list) -> list:
+    for i in range(n):
+        list.append(randint(1, 10))
+    sort_lst = sorted(list)
+    print(sort_lst)
+    return sort_lst
+
+
+def picking_berries(list):
+    result = list[-2] + list[-3] + list[-1]
+    print(result)
+
+
+picking_berries(creating_bushes(lst))
