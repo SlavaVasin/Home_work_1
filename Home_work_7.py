@@ -13,6 +13,15 @@
 Вывод:
 Парам пам-пам '''
 
+c = input()
+st = c.lower().split()
+f = lambda x: sum(1 for i in x if i in 'а')
+t = f(st[0])
+if all([f(i) == t for i in st]):
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
+
 '''Задача 36:
  Напишите функцию print_operation_table(operation, num_rows=6, num_columns=6),
   которая принимает в качестве аргумента функцию, вычисляющую элемент по номеру строки и столбца. 
