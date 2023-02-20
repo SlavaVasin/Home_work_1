@@ -13,14 +13,11 @@
 Вывод:
 Парам пам-пам '''
 
-c = input()
-st = c.lower().split()
-f = lambda x: sum(1 for i in x if i in 'а')
-t = f(st[0])
-if all([f(i) == t for i in st]):
-    print('Парам пам-пам')
+_list = [len([i for i in el if i.lower() in "а"]) for el in input().split()]
+if all([i == _list[0] for i in _list]):
+    print("Парам пам-пам")
 else:
-    print('Пам парам')
+    print("Пам парам")
 
 '''Задача 36:
  Напишите функцию print_operation_table(operation, num_rows=6, num_columns=6),
